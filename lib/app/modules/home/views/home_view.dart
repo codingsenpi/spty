@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:spty/app/core/widgets/custom_textfield.dart';
 import 'package:spty/app/core/widgets/large_text.dart';
 import 'package:spty/app/core/widgets/small_text.dart';
 
@@ -25,7 +26,12 @@ class HomeView extends GetView<HomeController> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [LargeText(text: 'HELLO')],
+        children: [
+          CustomTextField(
+              controller: controller.spotifyUrlController,
+              hintText: 'Spotify URL'),
+          LargeText(text: 'HELLO')
+        ],
       )),
     );
   }
